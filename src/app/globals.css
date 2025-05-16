@@ -217,3 +217,30 @@ html {
   background-image: url('/path-to-subtle-pattern.png');
 }
 */
+
+/* Custom Animations for HeroSection */
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(8deg);
+  }
+}
+.animate-wiggle {
+  animation: wiggle 1.2s infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 16px 4px #a5b4fc, 0 0 32px 8px #818cf8;
+  }
+  50% {
+    box-shadow: 0 0 32px 8px #818cf8, 0 0 48px 16px #a5b4fc;
+  }
+}
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
