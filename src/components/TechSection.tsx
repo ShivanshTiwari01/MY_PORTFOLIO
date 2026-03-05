@@ -2,10 +2,10 @@ import { FiCpu } from 'react-icons/fi';
 import TechCategory from './TechCategory';
 
 const techStack = {
-  languages: ['C++', 'JavaScript', 'TypeScript', 'Python'],
-  frontend: ['HTML', 'CSS', 'React', 'Next.js', 'Redux'],
-  backend: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB'],
-  devops: ['Git', 'Docker', 'Linux', 'AWS'],
+  languages: ['TypeScript', 'JavaScript', 'Go', 'Python'],
+  frontend: ['React', 'Next.js', 'Redux', 'Tailwind CSS', 'HTML', 'CSS'],
+  backend: ['Node.js', 'Express', 'Gin', 'PostgreSQL', 'MongoDB'],
+  devops: ['AWS', 'Docker', 'Kubernetes', 'Git', 'Linux'],
 };
 
 const TechSection = () => (
