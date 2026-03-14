@@ -3,6 +3,8 @@
 import NavBar from '../components/NavBar';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
+import ServicesSection from '../components/ServicesSection';
+import ExperienceSection from '../components/ExperienceSection';
 import TechSection from '../components/TechSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
@@ -14,6 +16,8 @@ export default function Home() {
       <NavBar />
       <HeroSection />
       <AboutSection />
+      <ServicesSection />
+      <ExperienceSection />
       <TechSection />
       <ProjectsSection />
       <ContactSection />

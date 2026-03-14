@@ -44,7 +44,7 @@ const HeroSection = () => {
       },
       detectRetina: true,
     }),
-    []
+    [],
   );
 
   return (
@@ -64,56 +64,82 @@ const HeroSection = () => {
           className='mb-10 relative inline-block group'
         >
           <div className='absolute -inset-2 rounded-full bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500 opacity-60 blur-lg scale-110 group-hover:scale-125 group-hover:opacity-80 transition-all duration-500 z-0'></div>
-          <Image
-            src='/my_image.jpg'
-            alt='Shivansh Tiwari'
-            width={150}
-            height={150}
-            className='relative rounded-full border-4 border-white shadow-2xl mx-auto z-10 hover:scale-105 transition-transform duration-300'
-            priority
-          />
+          <div className='relative w-[250px] h-[250px] rounded-full overflow-hidden border-4 border-white shadow-2xl mx-auto z-10 hover:scale-105 transition-transform duration-300'>
+            <Image
+              src='/my_image_prof.png'
+              alt='Shivansh Tiwari'
+              fill
+              sizes='250px'
+              className='object-cover object-center w-full h-full'
+              priority
+            />
+          </div>
           <div className='absolute bottom-0 right-0 bg-green-400 rounded-full p-1.5 border-2 border-white z-20'>
             <span className='block w-3 h-3 bg-green-500 rounded-full animate-pulse'></span>
           </div>
         </motion.div>
+
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className='inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/30 text-sm font-medium text-indigo-100 mb-4 tracking-wide backdrop-blur-sm'
+        >
+          📍 NCR, India · Open to Remote
+        </motion.div> */}
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
           className='text-5xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg bg-gradient-to-r from-white via-blue-200 to-purple-400 bg-clip-text text-transparent'
         >
-          Hi 👋, I&apos;m Shivansh Tiwari
+          Shivansh Tiwari
         </motion.h1>
+
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className='text-2xl md:text-3xl font-medium text-indigo-100 mb-8 flex items-center justify-center gap-2'
+          className='text-2xl md:text-3xl font-semibold text-cyan-200 mb-6'
         >
-          <span className='inline-block animate-bounce'>🛠️</span>
-          <span className='inline-block animate-pulse'>💡</span>
-          Full Stack Architect & Passionate Developer
+          Senior Software Developer &amp; System Architect
         </motion.p>
+
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className='text-lg md:text-xl text-indigo-50 max-w-3xl mx-auto leading-relaxed mb-8'
+          className='text-lg md:text-xl text-indigo-50 max-w-3xl mx-auto leading-relaxed mb-10'
         >
-          Building bridges between ideas and execution. I specialize in
-          transforming visionary ideas into functional, user-friendly
-          applications. Let&apos;s construct the future, one line of code at a
-          time! <span className='inline-block animate-wiggle'>🏗️💻</span>
+          I build{' '}
+          <span className='font-semibold text-cyan-300'>
+            scalable, production-grade systems
+          </span>{' '}
+          end-to-end — distributed backends, AI-integrated apps, polished React
+          frontends, and automated CI/CD pipelines. Let&apos;s turn your idea
+          into a product. 🚀
         </motion.p>
-        <motion.a
-          href='#projects'
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className='inline-block px-10 py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-white font-bold text-lg shadow-xl hover:scale-110 hover:from-purple-500 hover:to-cyan-400 transition-all duration-300 border-2 border-white hover:border-[var(--primary)] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[var(--primary)] animate-glow'
+          className='flex flex-col sm:flex-row gap-4 justify-center'
         >
-          🚀 View My Work
-        </motion.a>
+          <a
+            href='#projects'
+            className='inline-block px-10 py-4 rounded-full bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 text-white font-bold text-lg shadow-xl hover:scale-110 hover:from-purple-500 hover:to-cyan-400 transition-all duration-300 border-2 border-white focus:outline-none animate-glow'
+          >
+            🔍 View My Work
+          </a>
+          <a
+            href='#contact'
+            className='inline-block px-10 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white font-bold text-lg shadow-xl hover:scale-110 hover:bg-white/20 transition-all duration-300 border-2 border-white/60 focus:outline-none'
+          >
+            💼 Hire Me
+          </a>
+        </motion.div>
       </div>
     </section>
   );
